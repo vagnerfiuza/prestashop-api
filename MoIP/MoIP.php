@@ -949,7 +949,6 @@ background-position: top center;
 
         return $html;
 
-
     }
 
 
