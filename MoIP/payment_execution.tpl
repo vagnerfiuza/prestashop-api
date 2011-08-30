@@ -33,6 +33,12 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
+            if($("#moip_credito_forma").is(':checked')){
+            $("#moip_credito").show();
+            }
+            if($("#moip_debito_forma").is(':checked')){
+            $("#moip_debito").show();
+            }
         $('#submit').click(function() {
             var valor = "";
             //Executa Loop entre todas as Radio buttons com o name de valor
@@ -43,7 +49,6 @@
             })
 //            alert(valor);
             if(valor == 'CartaoCredito'){
-                $(document).ready(function() {
 
                     $("#formulario").validate({
                         rules : {
@@ -70,7 +75,6 @@
                             credito_portador_nascimento : "<i>Ex. 30/11/1980</i>",
                             credito_portador_cpf : "<i>Ex. 111.111.111-11</i>"
                         }
-                    });
 
                 });
             }else{
@@ -154,7 +158,8 @@
  {/if}
  {if $resp_pd_credito eq 'true'}
   <tr>
-    <td colspan="3" align="center" valign="middle" class="option"><input onClick="document.getElementById('moip_credito').style.display='block';document.getElementById('moip_debito').style.display='none'" type="radio" id="moip_credito_forma" name="forma_pagamento" title="forma_pagamento" value="CartaoCredito"/>
+    <td colspan="3" align="center" valign="middle" class="option">
+    <input onClick="document.getElementById('moip_credito').style.display='block';document.getElementById('moip_debito').style.display='none'" type="radio" id="moip_credito_forma" name="forma_pagamento" title="forma_pagamento" value="CartaoCredito"/>
       <label for="radio7" class="p1"><strong>Cartão de Crédito</strong></label></td>
   </tr>
 
@@ -196,7 +201,7 @@
           <td height="30" colspan="2" align="left" valign="middle">
 {if $aceitar_parcelamento eq '1'}
             <select name="credito_parcelamento" id="credito_parcelamento">
-{foreach from=$parcelamento key=k item=v }
+{foreach from=$parcelamento key=k item=v}
               <option value="({$k})[{$v.total}]">{$k} x R$ {$v.valor} | Total: R$ {$v.total}</option>
 {/foreach}
             </select>
