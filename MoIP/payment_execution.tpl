@@ -20,13 +20,9 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
-
         $("#credito_portador_telefone").mask("(99)9999-9999");
         $("#credito_portador_cpf").mask("999.999.999-99");
         $("#credito_portador_nascimento").mask("99/99/9999");
-
-
-
     });
 </script>
 
@@ -81,6 +77,13 @@
                 $("#formulario").unbind("submit").submit();
             }
         });
+        var i = 0;
+        $("#formulario").submit(function() {
+            $("#submit").attr('disabled', true);
+            
+            i++;
+            if ( i > 1 ) { alert(5);return false; }
+            });
     });
 
 </script>
