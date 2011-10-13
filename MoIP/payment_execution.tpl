@@ -1,10 +1,10 @@
 {capture name=path}{l s='Shipping'}{/capture}
-{include file=$tpl_dir./breadcrumb.tpl}
+{include file="$tpl_dir./breadcrumb.tpl"}
 
 <h2>{l s='MoIP Pagamentos' mod='MoIP'}</h2>
 
 {assign var='current_step' value='payment'}
-{include file=$tpl_dir./order-steps.tpl}
+{include file="$tpl_dir./order-steps.tpl"}
 
 <link href="{$base_dir_ssl}/modules/MoIP/code/payment.css" rel="stylesheet" type="text/css" media="all" />
 
@@ -57,7 +57,7 @@
 			<li>
                                 <label>Opções de pagamento:
                                     <select name="credito_parcelamento" id="credito_parcelamento">
-                                {foreach from=$parcelamento key=k item=v }
+                                {foreach from=$parcelamento key=k item=v}
                                         <option value="({$k})[{$v.total}]">{$k} x R$ {$v.valor} | Total: R$ {$v.total}</option>
                                 {/foreach}
                                     </select>
