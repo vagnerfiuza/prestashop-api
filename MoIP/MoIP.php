@@ -63,7 +63,7 @@ class MoIP extends PaymentModule {
     public function __construct() {
 
         $this->name = 'MoIP';
-        $this->tab = 'Payment';
+        $this->tab = 'payments_gateways';
         $this->version = ' I.API 1.0 | MoIP Labs';
 
         $this->currencies = true;
