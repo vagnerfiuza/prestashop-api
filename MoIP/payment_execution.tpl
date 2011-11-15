@@ -1,7 +1,6 @@
 {capture name=path}{l s='Shipping'}{/capture}
 {include file="$tpl_dir./breadcrumb.tpl"}
 
-
 <h2>{l s='MoIP Pagamentos' mod='MoIP'}</h2>
 
 {assign var='current_step' value='payment'}
@@ -18,15 +17,11 @@
 
 {literal}
 <script type="text/javascript">
-
     $(document).ready(function() {
         $("#credito_portador_telefone").mask("(99)9999-9999");
         $("#credito_portador_cpf").mask("999.999.999-99");
         $("#credito_portador_nascimento").mask("99/99/9999");
     });
-</script>
-
-<script type="text/javascript">
 
     $(document).ready(function() {
             if($("#moip_credito_forma").is(':checked')){
