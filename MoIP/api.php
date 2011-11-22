@@ -117,14 +117,14 @@ function getAuth($ambiente_moip){
 if ($ambiente_moip == "https://www.moip.com.br"){
 
 $action_url = "https://www.moip.com.br"; //producao
-$action_token = "DPA3ZEEJR2MWNGK5FACBUNNARBYBOQNK"; //producao
-$action_key = "9CKWTHK9JAX2B6QK0ORMZBLKZFW5PR3MEXZFKG9H"; //producao
+$action_token = "E3DXZ3IHKEWGVWXFHQCSKCE0GTKT5PFP"; //producao
+$action_key = "QBDTYLNLCN7SAZ65J7LD6U18K73TJ1KSEURDEROP"; //producao
 
 }else{
 
 $action_url = "https://desenvolvedor.moip.com.br/sandbox"; //sandbox
-$action_token = "PE8ZECRX4ZPV3OF7HRG136HEPDOOTNUB";  //sandbox
-$action_key = "KBJW7FOG1M5WV1J7KCFURVO4TMTVTTBSBM3ZNJW4"; //sandbox
+$action_token = "V0MFFJTVJGPOVCQJD3KZV62ITTC15RFG";  //sandbox
+$action_key = "OYSRNPUL885EJPPG10AEQUQZQYZBEZMZCUQBOMTA"; //sandbox
 
 } 
 
