@@ -106,7 +106,7 @@
     <p class="p1"><i>Status: </i>{$status_pd}</p>
     <p class="p1"><i>Código MoIP: </i>{$CodigoMoIP}</p>
       </td>
-  </tr>
+  </tP>
 
   <tr>
     <td height="30" colspan="3" align="left" valign="middle" class="p1"><a href="{$base_dir}/order.php?step=3">Pagar com outra forma de pagamento</a></td>

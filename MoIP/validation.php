@@ -205,24 +205,24 @@ if($_POST['instrucao'] == "API"){
 
     $comissionamento = Configuration::get('COMISSIONAMENTO');
     if($comissionamento) {
-        $comissoes = $xml->createElement('Comissoes', '');
         for($i=1;$i<=3;$i++) {
+            $comissoes = $xml->createElement('Comissoes', '');
             $comissionamento_login = Configuration::get('COMISSIONAMENTO_LOGIN_'.$i);
             $comissionamento_tipo = Configuration::get('COMISSIONAMENTO_TIPO_'.$i);
             $comissionamento_valor = Configuration::get('COMISSIONAMENTO_VALOR_'.$i);
             if($comissionamento_login && $comissionamento_tipo && $comissionamento_tipo) {
-                $comissionamento = $xml->createElement('Comissonamento', '');
+                $comissionamento = $xml->createElement('Comissionamento', '');
                 $com_razao = $xml->createElement('Razao', 'Comissão '.$i);
                 $comissionamento->appendChild($com_razao);
-                $comissionado = $xml->createElement('Comissonado', '');
+                $comissionado = $xml->createElement('Comissionado', '');
                 $com_loginmoip = $xml->createElement('LoginMoIP', $comissionamento_login);
                 $comissionamento->appendChild($com_loginmoip);
                 $com_tipo = $xml->createElement($comissionamento_tipo == 'fixo' ? 'ValorFixo' : 'ValorPercentual', $comissionamento_valor);
                 $comissionamento->appendChild($com_tipo);
                 $comissoes->appendChild($comissionamento);
             }
+            $unica->appendChild($comissoes);
         }
-        $unica->appendChild($comissoes);
     }
 
 

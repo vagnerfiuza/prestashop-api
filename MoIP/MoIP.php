@@ -57,16 +57,16 @@ class MoIP extends PaymentModule {
         "nao" => 'Não'
     );
     public $comissionamento_tipo_1 = array(
-        "Fixo" => 'fixo',
-        "Fercentual" => 'percentual'
+        "fixo" => 'Fixo',
+        "percentual" => 'Percentual'
     );
     public $comissionamento_tipo_2 = array(
-        "Fixo" => 'fixo',
-        "Fercentual" => 'percentual'
+        "fixo" => 'Fixo',
+        "percentual" => 'Percentual'
     );
     public $comissionamento_tipo_3 = array(
-        "Fixo" => 'fixo',
-        "Fercentual" => 'percentual'
+        "fixo" => 'Fixo',
+        "percentual" => 'Percentual'
     );
     public $pd_debito = array(
         "sim" => 'Sim',
