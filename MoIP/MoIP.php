@@ -868,7 +868,7 @@ public function hookPayment($params) {
 
 
     if (!Validate::isLoadedObject($address) OR !Validate::isLoadedObject($customer) OR !Validate::isLoadedObject($currency))
-        return $this->l('MoIP erro: (Endere�o referente ao usuario n�o encontrato.)');
+        return $this->l('MoIP erro: (Endereço referente ao usuario não encontrado.)');
 
     $products = $params['cart']->getProducts();
 
@@ -940,7 +940,7 @@ public function getL($key, $cod_moip=false, $id_transacao=false, $email_consumid
 
     $translations = array(
         'valor_moip' => $this->l('Valor nao especificado corretamente.'),
-        'status_pagamento_moip' => $this->l('Status do Pagamento nao defifido corretamente, ou invalido.'),
+        'status_pagamento_moip' => $this->l('Status do Pagamento nao definido corretamente, ou invalido.'),
         'payment' => $this->l('MoIP Pagamentos '),
         'id_transacao_moip' => $this->l('ID Proprio invalido ou nao relacionado a uma ordem de pagamento'),
         'email_consumidor_moip' => $this->l('E-Mail do cliente nao informado, POST invalido.'),
